@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生日快乐</title>
+    <style>
+        body {
+            background-image: url("Image/1.webp");
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: left; /* 或者保持center，根据你的设计需求 */
+        }
+
+        .section p {
+            margin: 0 0 10px; /* 在寄语和链接之间增加一些间距 */
+        }
+
+        .button-link {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center; /* 确保链接内的文本居中（虽然这里不是必需的，因为<a>默认就是内联元素） */
+            display: inline-block; /* 使链接能够应用宽度和高度 */
+        }
+
+        .button-link:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05); /* 悬停时稍微放大 */
+        }
+        #audio-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display:none ;
+        }
+
+        /* 加上 -webkit- 注意兼容 */
+        a {
+            font-size: 166px; /* 增加字体大小 */
+            background: -webkit-linear-gradient(135deg,
+            #0eaf6d,
+            #ff6ac6 25%,
+            #147b96 50%,
+            #e6d205 55%,
+            #2cc4e0 60%,
+            #8b2ce0 80%,
+            #ff6384 95%,
+            #08dfb4);
+            /* 文字颜色填充设置为透明 */
+            -webkit-text-fill-color: transparent;
+            /* 背景裁剪，即让文字使用背景色 */
+            -webkit-background-clip: text;
+            /* 背景图放大一下，看着柔和一些 */
+            -webkit-background-size: 200% 100%;
+            /* 应用动画flowCss 12秒速度 无限循环 线性匀速动画*/
+            -webkit-animation: flowCss 12s infinite linear;
+        }
+
+        @-webkit-keyframes flowCss {
+            0% {
+                /* 移动背景位置 */
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -400% 0;
+            }
+        }
+
+        a:hover {
+            -webkit-animation: flowCss 4s infinite linear;
+        }
+
+    </style>
+</head>
+<body>
+<div style="padding-top: 70px;">
+    <a style="font-size: 24px; font-family: 'Arial Black', sans-serif;">人的一生细腻地编织着过往的记忆、当下的风景与未来的憧憬。</a>
+</div>
+<div class="section">
+    <p>"回望过去的一年，你的笑容、努力和成长，都如同璀璨星辰，照亮了我们共同的记忆。愿这一年里的每一份努力，都在今天这个特别的日子里，化作最甜蜜的果实。生日快乐！"</p>
+    <a href="过往的记忆.html" class="button-link">过往的记忆</a>
+</div>
+<div class="section">
+    <p>"亲爱的朋友，生日快乐！愿你在新的一岁里，每一天都如星光般璀璨，生活因你的笑容而更加美好。"</p>
+    <a href="当下的风景.html" class="button-link">当下的风景</a>
+</div>
+<div class="section">
+    <p>"在你未来的每一天里，愿快乐像空气一样无处不在，让你的心灵永远被温暖和光明所包围，让笑容成为你永恒的魅力。"</p>
+    <a href="未来的憧憬.html" class="button-link">未来的憧憬</a>
+</div>
+
+<div id="audio-container">
+    <audio autoplay loop preload="auto" controls src="Music/北斗星的爱.mp3">
+    </audio>
+</div>
+
+</body>
+</html>
+

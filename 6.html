@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      width: 80px;
+      color: cornflowerblue;
+      animation: animate 0.5s linear infinite; /* 将动画应用到 h1 元素 */
+    }
+
+    @keyframes animate {
+      0%, 25% {
+        text-shadow: 2px 2px 2px #ff6384;
+      }
+      50% {
+        text-shadow: 2px -2px 2px #ff6384;
+      }
+      75% {
+        text-shadow: -2px 2px 2px #ff6384;
+      }
+      100% {
+        text-shadow: -2px -2px 2px #ff6384;
+      }
+    }
+  </style>
+</head>
+graph TD
+    A[积分获取] --> B(会员入住酒店)
+    A --> C(会员参与活动)
+    A --> D(会员推荐新会员)
+    B --> E[积分增加]
+    C --> E
+    D --> E
+    E --> F[积分查询]
+    F --> G(会员查询积分余额)
+    F --> H(会员查看积分明细)
+    H --> I[积分兑换]
+    I --> J(会员选择兑换商品或服务)
+    J --> K(系统验证积分是否足够)
+    K --> L[扣减积分并完成兑换]
+    K --> M{积分不足}
+    M --> N[提示积分不足]
+    O[优惠获取] --> P(会员注册成为会员)
+    O --> Q(会员参与特定活动)
+    O --> R(会员在特定时间段内消费)
+    P --> S[优惠增加]
+    Q --> S
+    R --> S
+    S --> T[优惠查询]
+    T --> U(会员查询可用优惠)
+    T --> V(会员查看优惠详情)
+    V --> W[优惠使用]
+    W --> X(会员在消费时选择使用优惠)
+    X --> Y(系统验证优惠是否有效)
+    Y --> Z[应用优惠并完成支付]
+    Y --> AA{优惠无效}
+    AA --> AB[提示优惠无效]
+    AC[积分与优惠管理] --> AD(管理员添加新的积分规则)
+    AC --> AE(管理员添加新的优惠)
+    AC --> AF(管理员冻结或解冻积分与优惠)
+    AC --> AG(管理员设置积分与优惠的有效期)
+
+<body>
+<h1>hello</h1>
+<!--
+    一说到阴影，我们常常就会想到盒子的阴影，box-shadow。实际上css3另外提供了文字阴影text-shadow
+    text-shadow对应属性 text-shadow: h-shadow v-shadow blur color;
+                                     水平阴影 垂直阴影 模糊范围 颜色值
+    本例中，当页面加载完成后，给文字加上动画。四个方向依次都出现文字阴影，就类似跳动的效果了
+-->
+</body>
+
+</html>
